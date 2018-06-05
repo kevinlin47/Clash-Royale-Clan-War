@@ -32,3 +32,9 @@ public class ClashRoyale_ClanWar extends Application {
     }
     
 }
+
+/*
+curl --header "auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzgzLCJpZGVuIj
+oiMTgzOTk5NzgxMzAxOTExNTUyIiwibWQiOnt9LCJ0cyI6MTUyODIzMjAwMTAwOX0.fpFIZ5hLUAS8Fa
+_6OUyP5uhE60EwUeHNdV5jDWC3Lls" https://api.royaleapi.com/clan/9PJ82CRC
+*/
