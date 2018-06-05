@@ -10,6 +10,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TabPane;
+import javafx.scene.control.Tab;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -23,9 +25,17 @@ public class ClashRoyale_ClanWar extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Clan War v1.0");
         
-        StackPane layout=new StackPane();
+        TabPane tabPane=new TabPane();
         
-        Scene scene=new Scene(layout,800,800);
+        Tab memberTab=new Tab("Clan Members");
+        Tab warTab=new Tab("Clan War Stats");
+        Tab updateTab=new Tab("Update Stats");
+        
+        tabPane.getTabs().addAll(memberTab,warTab,updateTab);
+        tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
+        
+        
+        Scene scene=new Scene(tabPane,800,800);
         
         primaryStage.setScene(scene);
         primaryStage.show();
