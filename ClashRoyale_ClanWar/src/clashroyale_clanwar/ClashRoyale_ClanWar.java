@@ -15,6 +15,8 @@ import javafx.scene.control.Tab;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import okhttp3.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 /**
  *
@@ -44,7 +46,9 @@ public class ClashRoyale_ClanWar extends Application {
         .build();
 
         Response response = client.newCall(request).execute();
-        System.out.println(response.body().string());
+        /*System.out.println(response.body().string());*/   
+        Gson gson=new GsonBuilder().create();
+        ClanInformation clanInfo=gson.fromJson(response.body().string(),ClanInformation.class);
         
         Scene scene=new Scene(tabPane,800,800);
         
