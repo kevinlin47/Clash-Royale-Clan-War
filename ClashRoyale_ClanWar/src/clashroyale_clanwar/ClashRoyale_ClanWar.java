@@ -62,7 +62,14 @@ public class ClashRoyale_ClanWar extends Application {
             Statement st=conn.createStatement();
             
             Arrays.stream(members).forEach(e->{
-                String sqlStatment="INSERT INTO `clash_royale`.`member_stats` (`itemname`, `itemprice`, `itemtype`) VALUES ('"+itemName+"', '"+itemPrice+"', '"+itemCategory+"')";
+                try{
+                    String playerName=e.getName();
+                    String playerTag=e.getTag();
+                    String sqlStatement="INSERT INTO `clash_royale`.`member_stats` (`name`, `tag`) VALUES ('"+playerName+"', '"+playerTag+"')";
+                    st.executeUpdate(sqlStatement);
+                } catch(SQLException ex){
+                    ex.printStackTrace();
+                }
             });
         } catch(SQLException ex){
             ex.printStackTrace();
