@@ -31,6 +31,38 @@ public class ClanInformation {
         return this.description;
     }
     
+    public String getTag(){
+        return this.tag;
+    }
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    public String getType(){
+        return this.type;
+    }
+    
+    public String getScore(){
+        return this.score;
+    }
+    
+    public String getMemberCount(){
+        return this.memberCount;
+    }
+    
+    public String getRequiredScore(){
+        return this.requiredScore;
+    }
+    
+    public String getDonations(){
+        return this.donations;
+    }
+    
+    public HashMap<String,String> getLocation(){
+        return this.location;
+    }
+    
     public class Member{
         private String name;
         private String rank;
