@@ -59,7 +59,7 @@ public class ClashRoyale_ClanWar extends Application {
         
         Arrays.stream(members).forEach(e->System.out.println(e.getName()));
         
-        /*Dumping all current info into sql database*/
+        /*Testing SQL Connection*/
         try{
             java.sql.Connection conn=DriverManager.getConnection(reader.getString("db.url"),reader.getString("db.username"),reader.getString("db.password"));
             Statement st=conn.createStatement();
