@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package clashroyale_clanwar;
+import java.util.HashMap;
 
 /**
  *
@@ -18,4 +19,54 @@ public class ClanInformation {
     private String score;
     private String memberCount;
     private String requiredScore;
+    private String donations;
+    private HashMap<String,String> location;
+    private Member members[];
+    
+    public Member[] getMembers(){
+        return this.members;
+    }
+    
+    public class Member{
+        private String name;
+        private String rank;
+        private String role;
+        private String expLevel;
+        private String trophies;
+        private String donations;
+        private HashMap<String,String> arena;
+        
+        public String getName(){
+            return this.name;
+        }
+        
+        public String getRank(){
+            return this.rank;
+        }
+        
+        public String getRole(){
+            return this.role;
+        }
+        
+        public String getExpLevel(){
+            return this.expLevel;
+        }
+        
+        public String getTrophies(){
+            return this.trophies;
+        }
+        
+        public String getDonations(){
+            return this.donations;
+        }
+        
+        public HashMap<String,String> getArea()
+        {
+            return this.arena;
+        }
+    }
+    
+                
+                
+    
 }
