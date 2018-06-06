@@ -40,15 +40,18 @@ public class ClashRoyale_ClanWar extends Application {
         tabPane.getTabs().addAll(memberTab,warTab,updateTab);
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
         
+        ResourceBundle reader=ResourceBundle.getBundle("clashroyale_clanwar/config");
+        String apiKey=reader.getString("key");
+        
         OkHttpClient client = new OkHttpClient();
-
+        
         Request request = new Request.Builder()
         .url("https://api.royaleapi.com/clan/8G0U9U2")
         .get()
-        .addHeader("auth", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzgzLCJpZGVuIjoiMTgzOTk5NzgxMzAxOTExNTUyIiwibWQiOnt9LCJ0cyI6MTUyODIzMjAwMTAwOX0.fpFIZ5hLUAS8Fa_6OUyP5uhE60EwUeHNdV5jDWC3Lls")
+        .addHeader("auth", apiKey)
         .build();
         Response response = client.newCall(request).execute();
-        /*System.out.println(response.body().string());*/
+        
         Gson gson=new GsonBuilder().create();
         ClanInformation clanInfo=gson.fromJson(response.body().string(),ClanInformation.class);
         
@@ -58,20 +61,12 @@ public class ClashRoyale_ClanWar extends Application {
         
         /*Dumping all current info into sql database*/
         try{
-            java.sql.Connection conn=DriverManager.getConnection("jdbc:mysql://localhost/clash_royale","root","trooper");
+            java.sql.Connection conn=DriverManager.getConnection(reader.getString("db.url"),reader.getString("db.username"),reader.getString("db.password"));
             Statement st=conn.createStatement();
             
-            Arrays.stream(members).forEach(e->{
-                try{
-                    String playerTag=e.getTag();
-                    String playerName=e.getName();
-                    String sqlStatement="INSERT INTO `clash_royale`.`member_stats` (`name`, `tag`) VALUES ('"+playerName+"', '"+playerTag+"')";
-                    st.executeUpdate(sqlStatement);
-                } catch(SQLException ex){
-                    ex.printStackTrace();
-                }
-            });
+            System.out.println("Connection Successful");
         } catch(SQLException ex){
+            System.out.println("Connection Failed");
             ex.printStackTrace();
         }
         
