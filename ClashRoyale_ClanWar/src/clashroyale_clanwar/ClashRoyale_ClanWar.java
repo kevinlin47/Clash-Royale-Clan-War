@@ -61,6 +61,9 @@ public class ClashRoyale_ClanWar extends Application {
             java.sql.Connection conn=DriverManager.getConnection("127.0.0.1","root","trooper");
             Statement st=conn.createStatement();
             
+            Arrays.stream(members).forEach(e->{
+                String sqlStatment="INSERT INTO `clash_royale`.`member_stats` (`itemname`, `itemprice`, `itemtype`) VALUES ('"+itemName+"', '"+itemPrice+"', '"+itemCategory+"')";
+            });
         } catch(SQLException ex){
             ex.printStackTrace();
         }
