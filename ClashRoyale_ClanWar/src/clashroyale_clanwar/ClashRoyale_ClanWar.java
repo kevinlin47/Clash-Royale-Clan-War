@@ -5,6 +5,8 @@
  */
 package clashroyale_clanwar;
 
+import clashroyale_clanwar.ClanInformation.Member;
+import java.util.*;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -48,6 +50,11 @@ public class ClashRoyale_ClanWar extends Application {
         /*System.out.println(response.body().string());*/
         Gson gson=new GsonBuilder().create();
         ClanInformation clanInfo=gson.fromJson(response.body().string(),ClanInformation.class);
+        
+        Member members[]=clanInfo.getMembers();
+        
+        Arrays.stream(members).forEach(e->System.out.println(e.getName()));
+        
         Scene scene=new Scene(tabPane,800,800);
         
         primaryStage.setScene(scene);
