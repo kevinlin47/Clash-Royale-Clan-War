@@ -44,12 +44,10 @@ public class ClashRoyale_ClanWar extends Application {
         .get()
         .addHeader("auth", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzgzLCJpZGVuIjoiMTgzOTk5NzgxMzAxOTExNTUyIiwibWQiOnt9LCJ0cyI6MTUyODIzMjAwMTAwOX0.fpFIZ5hLUAS8Fa_6OUyP5uhE60EwUeHNdV5jDWC3Lls")
         .build();
-
         Response response = client.newCall(request).execute();
-        /*System.out.println(response.body().string());*/   
+        /*System.out.println(response.body().string());*/
         Gson gson=new GsonBuilder().create();
         ClanInformation clanInfo=gson.fromJson(response.body().string(),ClanInformation.class);
-        
         Scene scene=new Scene(tabPane,800,800);
         
         primaryStage.setScene(scene);
@@ -65,6 +63,3 @@ public class ClashRoyale_ClanWar extends Application {
     
 }
 
-/*
-curl --header "auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NzgzLCJpZGVuIjoiMTgzOTk5NzgxMzAxOTExNTUyIiwibWQiOnt9LCJ0cyI6MTUyODIzMjAwMTAwOX0.fpFIZ5hLUAS8Fa_6OUyP5uhE60EwUeHNdV5jDWC3Lls" https://api.royaleapi.com/clan/8G0U9U2
-*/

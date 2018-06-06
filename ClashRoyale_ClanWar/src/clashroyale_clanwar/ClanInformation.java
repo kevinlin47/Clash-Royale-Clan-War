@@ -27,6 +27,10 @@ public class ClanInformation {
         return this.members;
     }
     
+    public String getDescription(){
+        return this.description;
+    }
+    
     public class Member{
         private String name;
         private String rank;
