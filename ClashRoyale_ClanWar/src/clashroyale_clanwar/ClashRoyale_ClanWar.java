@@ -58,13 +58,13 @@ public class ClashRoyale_ClanWar extends Application {
         
         /*Dumping all current info into sql database*/
         try{
-            java.sql.Connection conn=DriverManager.getConnection("127.0.0.1","root","trooper");
+            java.sql.Connection conn=DriverManager.getConnection("jdbc:mysql://localhost/clash_royale","root","trooper");
             Statement st=conn.createStatement();
             
             Arrays.stream(members).forEach(e->{
                 try{
-                    String playerName=e.getName();
                     String playerTag=e.getTag();
+                    String playerName=e.getName();
                     String sqlStatement="INSERT INTO `clash_royale`.`member_stats` (`name`, `tag`) VALUES ('"+playerName+"', '"+playerTag+"')";
                     st.executeUpdate(sqlStatement);
                 } catch(SQLException ex){

@@ -70,6 +70,7 @@ public class ClanInformation {
         private String expLevel;
         private String trophies;
         private String donations;
+        private String tag;
         private HashMap<String,String> arena;
         
         public String getName(){
@@ -94,6 +95,10 @@ public class ClanInformation {
         
         public String getDonations(){
             return this.donations;
+        }
+        
+        public String getTag(){
+            return this.tag;
         }
         
         public HashMap<String,String> getArea()
