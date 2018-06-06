@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 import okhttp3.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import java.sql.*;
 
 /**
  *
@@ -54,6 +55,15 @@ public class ClashRoyale_ClanWar extends Application {
         Member members[]=clanInfo.getMembers();
         
         Arrays.stream(members).forEach(e->System.out.println(e.getName()));
+        
+        /*Dumping all current info into sql database*/
+        try{
+            java.sql.Connection conn=DriverManager.getConnection("127.0.0.1","root","trooper");
+            Statement st=conn.createStatement();
+            
+        } catch(SQLException ex){
+            ex.printStackTrace();
+        }
         
         Scene scene=new Scene(tabPane,800,800);
         
