@@ -84,6 +84,8 @@ public class ClashRoyale_ClanWar extends Application {
         Label clanLabel=new Label();
         clanLabel.setGraphic(new ImageView(image));
         
+        grid.add(clanLabel,0,0);
+        
         memberTab.setContent(grid);
         
         Scene scene=new Scene(tabPane,800,800);
