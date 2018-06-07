@@ -24,6 +24,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.sql.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
 
 /**
  *
@@ -83,8 +84,11 @@ public class ClashRoyale_ClanWar extends Application {
         Image image = new Image(getClass().getResourceAsStream("cooltext.png"));
         Label clanLabel=new Label();
         clanLabel.setGraphic(new ImageView(image));
-        
         grid.add(clanLabel,0,0);
+        
+        StringBuilder sb=new StringBuilder();
+        sb.append(clanInfo.getName());
+        Text clan_info=new Text(sb.toString());
         
         memberTab.setContent(grid);
         
