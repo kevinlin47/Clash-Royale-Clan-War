@@ -15,7 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
-import javafx.scene.layout.StackPane;
+import javafx.geometry.Insets;
 import javafx.stage.Stage;
 import okhttp3.*;
 import com.google.gson.Gson;
@@ -23,6 +23,7 @@ import com.google.gson.GsonBuilder;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.sql.*;
+import javafx.scene.layout.GridPane;
 
 /**
  *
@@ -74,12 +75,16 @@ public class ClashRoyale_ClanWar extends Application {
             ex.printStackTrace();
         }
         */
-        StackPane stackPane=new StackPane();
+        GridPane grid = new GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(0, 10, 0, 10));
+        
         Image image = new Image(getClass().getResourceAsStream("cooltext.png"));
         Label clanLabel=new Label();
         clanLabel.setGraphic(new ImageView(image));
         
-        stackPane.getChildren().add(clanLabel);
+        memberTab.setContent(grid);
         
         Scene scene=new Scene(tabPane,800,800);
         
