@@ -40,6 +40,7 @@ public class ClashRoyale_ClanWar extends Application {
         tabPane.getTabs().addAll(memberTab,warTab,updateTab);
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
         
+        
         ResourceBundle reader=ResourceBundle.getBundle("clashroyale_clanwar/config");
         String apiKey=reader.getString("key");
         
@@ -59,7 +60,7 @@ public class ClashRoyale_ClanWar extends Application {
         
         Arrays.stream(members).forEach(e->System.out.println(e.getName()));
         
-        /*Testing SQL Connection*/
+        /*Testing SQL Connection
         try{
             java.sql.Connection conn=DriverManager.getConnection(reader.getString("db.url"),reader.getString("db.username"),reader.getString("db.password"));
             Statement st=conn.createStatement();
@@ -69,7 +70,7 @@ public class ClashRoyale_ClanWar extends Application {
             System.out.println("Connection Failed");
             ex.printStackTrace();
         }
-        
+        */
         Scene scene=new Scene(tabPane,800,800);
         
         primaryStage.setScene(scene);
