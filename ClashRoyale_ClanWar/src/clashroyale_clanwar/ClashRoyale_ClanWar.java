@@ -86,9 +86,15 @@ public class ClashRoyale_ClanWar extends Application {
         clanLabel.setGraphic(new ImageView(image));
         grid.add(clanLabel,0,0);
         
-        StringBuilder sb=new StringBuilder();
-        sb.append(clanInfo.getName());
-        Text clan_info=new Text(sb.toString());
+        image=new Image(getClass().getResourceAsStream("Cool Text - Name 289069069603806.png"));
+        Label nameLabel=new Label();
+        nameLabel.setGraphic(new ImageView(image));
+        grid.add(nameLabel,0,1);
+        
+        image=new Image(getClass().getResourceAsStream("tag.png"));
+        Label tagLabel=new Label();
+        tagLabel.setGraphic(new ImageView(image));
+        grid.add(tagLabel,0,2);
         
         memberTab.setContent(grid);
         
