@@ -103,13 +103,13 @@ public class ClashRoyale_ClanWar extends Application {
         
         image=new Image(getClass().getResourceAsStream("score.png"));
         Label scoreLabel=new Label();
-        tagLabel.setGraphic(new ImageView(image));
-        grid.add(scoreLabel,0,2);
+        scoreLabel.setGraphic(new ImageView(image));
+        grid.add(scoreLabel,0,4);
         
         image=new Image(getClass().getResourceAsStream("Required Trophies.png"));
         Label requiredLabel=new Label();
         requiredLabel.setGraphic(new ImageView(image));
-        grid.add(requiredLabel,0,2);
+        grid.add(requiredLabel,0,5);
         
         memberTab.setContent(grid);
         
