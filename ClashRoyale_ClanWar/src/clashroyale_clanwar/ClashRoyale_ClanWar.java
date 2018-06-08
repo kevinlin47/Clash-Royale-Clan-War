@@ -24,6 +24,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.sql.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 /**
@@ -90,6 +91,9 @@ public class ClashRoyale_ClanWar extends Application {
         Label nameLabel=new Label();
         nameLabel.setGraphic(new ImageView(image));
         grid.add(nameLabel,0,1);
+        Text name=new Text(clanInfo.getName());
+        name.setFont(Font.font("Arial",20));
+        grid.add(name, 1, 0);
         
         image=new Image(getClass().getResourceAsStream("tag.png"));
         Label tagLabel=new Label();
