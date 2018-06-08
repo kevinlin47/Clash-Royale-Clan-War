@@ -93,7 +93,7 @@ public class ClashRoyale_ClanWar extends Application {
         grid.add(nameLabel,0,1);
         Text name=new Text(clanInfo.getName());
         name.setFont(Font.font("Arial",20));
-        grid.add(name, 1, 0);
+        grid.add(name, 1, 1);
         
         image=new Image(getClass().getResourceAsStream("tag.png"));
         Label tagLabel=new Label();
