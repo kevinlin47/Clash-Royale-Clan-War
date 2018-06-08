@@ -79,7 +79,7 @@ public class ClashRoyale_ClanWar extends Application {
         GridPane grid = new GridPane();
         grid.setHgap(10);
         grid.setVgap(10);
-        grid.setPadding(new Insets(0, 10, 0, 10));
+        grid.setPadding(new Insets(0, 5, 0, 5));
         
         Image image = new Image(getClass().getResourceAsStream("cooltext.png"));
         Label clanLabel=new Label();
@@ -111,6 +111,20 @@ public class ClashRoyale_ClanWar extends Application {
         requiredLabel.setGraphic(new ImageView(image));
         grid.add(requiredLabel,0,5);
         
+        image=new Image(getClass().getResourceAsStream("count.png"));
+        Label countLabel=new Label();
+        countLabel.setGraphic(new ImageView(image));
+        grid.add(countLabel,0,6);
+        
+        image=new Image(getClass().getResourceAsStream("type.png"));
+        Label typeLabel=new Label();
+        typeLabel.setGraphic(new ImageView(image));
+        grid.add(typeLabel,0,7);
+        
+        image=new Image(getClass().getResourceAsStream("Cool Text - Location 289069565107223 (1).png"));
+        Label locationLabel=new Label();
+        locationLabel.setGraphic(new ImageView(image));
+        grid.add(locationLabel,0,8);
         memberTab.setContent(grid);
         
         Scene scene=new Scene(tabPane,800,800);
