@@ -80,55 +80,56 @@ public class ClashRoyale_ClanWar extends Application {
         GridPane grid = new GridPane();
         grid.setHgap(10);
         grid.setVgap(10);
-        grid.setPadding(new Insets(0, 5, 0, 5));
+        grid.setPadding(new Insets(0, 3, 0, 3));
         
-        Image image = new Image(getClass().getResourceAsStream("cooltext.png"));
-        Label clanLabel=new Label();
-        clanLabel.setGraphic(new ImageView(image));
-        grid.add(clanLabel,0,0);
-        
-        image=new Image(getClass().getResourceAsStream("Cool Text - Name 289069069603806.png"));
+        Image image=new Image(getClass().getResourceAsStream("Cool Text - Name 289069069603806.png"));
         Label nameLabel=new Label();
         nameLabel.setGraphic(new ImageView(image));
-        grid.add(nameLabel,0,1);
+        grid.add(nameLabel,0,0);
         Text name=new Text(clanInfo.getName());
         name.setFont(Font.font("Arial",20));
-        grid.add(name, 1, 1);
+        grid.add(name, 1, 0);
         
         image=new Image(getClass().getResourceAsStream("tag.png"));
         Label tagLabel=new Label();
         tagLabel.setGraphic(new ImageView(image));
-        grid.add(tagLabel,0,2);
+        grid.add(tagLabel,0,1);
+        Text tag=new Text(clanInfo.getTag());
+        tag.setFont(Font.font("Arial",20));
+        grid.add(tag, 1, 1);
         
         image=new Image(getClass().getResourceAsStream("description.png"));
         Label descriptionLabel=new Label();
         descriptionLabel.setGraphic(new ImageView(image));
-        grid.add(descriptionLabel,0,3);
+        grid.add(descriptionLabel,0,2);
+        Text description=new Text(clanInfo.getDescription());
+        tag.setFont(Font.font("Arial",20));
+        grid.add(description, 1, 2);
         
         image=new Image(getClass().getResourceAsStream("score.png"));
         Label scoreLabel=new Label();
         scoreLabel.setGraphic(new ImageView(image));
-        grid.add(scoreLabel,0,4);
+        grid.add(scoreLabel,0,3);
         
         image=new Image(getClass().getResourceAsStream("Required Trophies.png"));
         Label requiredLabel=new Label();
         requiredLabel.setGraphic(new ImageView(image));
-        grid.add(requiredLabel,0,5);
+        grid.add(requiredLabel,0,4);
         
         image=new Image(getClass().getResourceAsStream("count.png"));
         Label countLabel=new Label();
         countLabel.setGraphic(new ImageView(image));
-        grid.add(countLabel,0,6);
+        grid.add(countLabel,0,5);
         
         image=new Image(getClass().getResourceAsStream("type.png"));
         Label typeLabel=new Label();
         typeLabel.setGraphic(new ImageView(image));
-        grid.add(typeLabel,0,7);
+        grid.add(typeLabel,0,6);
         
         image=new Image(getClass().getResourceAsStream("Cool Text - Location 289069565107223 (1).png"));
         Label locationLabel=new Label();
         locationLabel.setGraphic(new ImageView(image));
-        grid.add(locationLabel,0,8);
+        grid.add(locationLabel,0,7);
         memberTab.setContent(grid);
         
         Scene scene=new Scene(tabPane,800,800);
