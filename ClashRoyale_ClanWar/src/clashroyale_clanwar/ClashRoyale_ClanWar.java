@@ -23,6 +23,7 @@ import com.google.gson.GsonBuilder;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.sql.*;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
@@ -151,7 +152,10 @@ public class ClashRoyale_ClanWar extends Application {
         
         TableView memberTable=new TableView();
         memberTable.setEditable(false);
+        TableColumn nameCol=new TableColumn("Name");
         
+        memberTable.getColumns().addAll(nameCol);
+        grid.add(memberTable,0,8);
         
         memberTab.setContent(grid);
         
