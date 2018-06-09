@@ -153,9 +153,12 @@ public class ClashRoyale_ClanWar extends Application {
         TableView memberTable=new TableView();
         memberTable.setEditable(false);
         TableColumn nameCol=new TableColumn("Name");
+        TableColumn rankCol=new TableColumn("Rank");
+        TableColumn donationsCol=new TableColumn("Donations");
+        TableColumn scoreCol=new TableColumn("Trophies");
         
-        memberTable.getColumns().addAll(nameCol);
-        grid.add(memberTable,0,8);
+        memberTable.getColumns().addAll(nameCol,rankCol,donationsCol,scoreCol);
+        grid.add(memberTable,1,8);
         
         memberTab.setContent(grid);
         
