@@ -110,6 +110,9 @@ public class ClashRoyale_ClanWar extends Application {
         Label scoreLabel=new Label();
         scoreLabel.setGraphic(new ImageView(image));
         grid.add(scoreLabel,0,3);
+        Text score=new Text(clanInfo.getScore());
+        score.setFont(Font.font("Arial",20));
+        grid.add(score,1,3);
         
         image=new Image(getClass().getResourceAsStream("Required Trophies.png"));
         Label requiredLabel=new Label();
