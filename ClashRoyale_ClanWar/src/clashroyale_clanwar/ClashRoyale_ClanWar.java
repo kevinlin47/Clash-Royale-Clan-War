@@ -136,11 +136,18 @@ public class ClashRoyale_ClanWar extends Application {
         Label typeLabel=new Label();
         typeLabel.setGraphic(new ImageView(image));
         grid.add(typeLabel,0,6);
+        Text type=new Text(clanInfo.getType());
+        type.setFont(Font.font("Arial",20));
+        grid.add(type,1,6);
         
         image=new Image(getClass().getResourceAsStream("Cool Text - Location 289069565107223 (1).png"));
         Label locationLabel=new Label();
         locationLabel.setGraphic(new ImageView(image));
         grid.add(locationLabel,0,7);
+        Text location=new Text(clanInfo.getLocation().get("name"));
+        location.setFont(Font.font("Arial",20));
+        grid.add(location,1,7);
+        
         memberTab.setContent(grid);
         
         Scene scene=new Scene(tabPane,800,800);
