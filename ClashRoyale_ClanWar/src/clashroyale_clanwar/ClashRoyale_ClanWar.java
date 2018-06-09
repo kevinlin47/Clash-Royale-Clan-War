@@ -87,7 +87,7 @@ public class ClashRoyale_ClanWar extends Application {
         nameLabel.setGraphic(new ImageView(image));
         grid.add(nameLabel,0,0);
         Text name=new Text(clanInfo.getName());
-        name.setFont(Font.font("Arial",20));
+        name.setFont(Font.font("Arial",18));
         grid.add(name, 1, 0);
         
         image=new Image(getClass().getResourceAsStream("tag.png"));
@@ -95,7 +95,7 @@ public class ClashRoyale_ClanWar extends Application {
         tagLabel.setGraphic(new ImageView(image));
         grid.add(tagLabel,0,1);
         Text tag=new Text(clanInfo.getTag());
-        tag.setFont(Font.font("Arial",20));
+        tag.setFont(Font.font("Arial",18));
         grid.add(tag, 1, 1);
         
         image=new Image(getClass().getResourceAsStream("description.png"));
@@ -103,7 +103,7 @@ public class ClashRoyale_ClanWar extends Application {
         descriptionLabel.setGraphic(new ImageView(image));
         grid.add(descriptionLabel,0,2);
         Text description=new Text(clanInfo.getDescription());
-        tag.setFont(Font.font("Arial",20));
+        tag.setFont(Font.font("Arial",18));
         grid.add(description, 1, 2);
         
         image=new Image(getClass().getResourceAsStream("score.png"));
@@ -111,7 +111,7 @@ public class ClashRoyale_ClanWar extends Application {
         scoreLabel.setGraphic(new ImageView(image));
         grid.add(scoreLabel,0,3);
         Text score=new Text(clanInfo.getScore());
-        score.setFont(Font.font("Arial",20));
+        score.setFont(Font.font("Arial",18));
         grid.add(score,1,3);
         
         image=new Image(getClass().getResourceAsStream("Required Trophies.png"));
@@ -119,7 +119,7 @@ public class ClashRoyale_ClanWar extends Application {
         requiredLabel.setGraphic(new ImageView(image));
         grid.add(requiredLabel,0,4);
         Text requiredScore=new Text(clanInfo.getRequiredScore());
-        requiredScore.setFont(Font.font("Arial",20));
+        requiredScore.setFont(Font.font("Arial",18));
         grid.add(requiredScore,1,4);
         
         
@@ -128,7 +128,7 @@ public class ClashRoyale_ClanWar extends Application {
         countLabel.setGraphic(new ImageView(image));
         grid.add(countLabel,0,5);
         Text memberCount=new Text(clanInfo.getMemberCount());
-        memberCount.setFont(Font.font("Arial",20));
+        memberCount.setFont(Font.font("Arial",18));
         grid.add(memberCount,1,5);
         
         
@@ -137,7 +137,7 @@ public class ClashRoyale_ClanWar extends Application {
         typeLabel.setGraphic(new ImageView(image));
         grid.add(typeLabel,0,6);
         Text type=new Text(clanInfo.getType());
-        type.setFont(Font.font("Arial",20));
+        type.setFont(Font.font("Arial",18));
         grid.add(type,1,6);
         
         image=new Image(getClass().getResourceAsStream("Cool Text - Location 289069565107223 (1).png"));
@@ -145,7 +145,7 @@ public class ClashRoyale_ClanWar extends Application {
         locationLabel.setGraphic(new ImageView(image));
         grid.add(locationLabel,0,7);
         Text location=new Text(clanInfo.getLocation().get("name"));
-        location.setFont(Font.font("Arial",20));
+        location.setFont(Font.font("Arial",18));
         grid.add(location,1,7);
         
         memberTab.setContent(grid);
