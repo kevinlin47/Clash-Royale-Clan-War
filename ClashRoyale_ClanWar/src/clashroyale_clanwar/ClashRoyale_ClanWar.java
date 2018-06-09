@@ -118,11 +118,19 @@ public class ClashRoyale_ClanWar extends Application {
         Label requiredLabel=new Label();
         requiredLabel.setGraphic(new ImageView(image));
         grid.add(requiredLabel,0,4);
+        Text requiredScore=new Text(clanInfo.getRequiredScore());
+        requiredScore.setFont(Font.font("Arial",20));
+        grid.add(requiredScore,1,4);
+        
         
         image=new Image(getClass().getResourceAsStream("count.png"));
         Label countLabel=new Label();
         countLabel.setGraphic(new ImageView(image));
         grid.add(countLabel,0,5);
+        Text memberCount=new Text(clanInfo.getMemberCount());
+        memberCount.setFont(Font.font("Arial",20));
+        grid.add(memberCount,1,5);
+        
         
         image=new Image(getClass().getResourceAsStream("type.png"));
         Label typeLabel=new Label();
