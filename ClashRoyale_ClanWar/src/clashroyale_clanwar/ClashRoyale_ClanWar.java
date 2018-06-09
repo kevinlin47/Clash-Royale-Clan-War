@@ -23,6 +23,8 @@ import com.google.gson.GsonBuilder;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.sql.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.GridPane;
@@ -160,6 +162,8 @@ public class ClashRoyale_ClanWar extends Application {
         memberTable.getColumns().addAll(nameCol,rankCol,donationsCol,scoreCol);
         grid.add(memberTable,1,8);
         
+        ObservableList<Member> data=FXCollections.observableArrayList();
+                
         memberTab.setContent(grid);
         
         Scene scene=new Scene(tabPane,800,800);
