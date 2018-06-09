@@ -163,7 +163,11 @@ public class ClashRoyale_ClanWar extends Application {
         grid.add(memberTable,1,8);
         
         ObservableList<Member> data=FXCollections.observableArrayList();
-                
+        
+        for (int i=0;i<members.length;++i){
+            data.addAll(members[i]);
+        }
+        
         memberTab.setContent(grid);
         
         Scene scene=new Scene(tabPane,800,800);
