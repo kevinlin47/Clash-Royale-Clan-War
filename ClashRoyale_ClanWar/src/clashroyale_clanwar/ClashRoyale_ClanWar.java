@@ -159,6 +159,10 @@ public class ClashRoyale_ClanWar extends Application {
         TableColumn rankCol=new TableColumn("Rank");
         TableColumn donationsCol=new TableColumn("Donations");
         TableColumn scoreCol=new TableColumn("Trophies");
+        nameCol.setSortable(false);
+        rankCol.setSortable(false);
+        donationsCol.setSortable(false);
+        scoreCol.setSortable(false);
         
         ObservableList<Member> data=FXCollections.observableArrayList();
         
@@ -170,6 +174,8 @@ public class ClashRoyale_ClanWar extends Application {
             new PropertyValueFactory<Member,String>("rank"));
         nameCol.setCellValueFactory(
             new PropertyValueFactory<Member,String>("name"));
+        donationsCol.setCellValueFactory(
+            new PropertyValueFactory<Member,String>("donations"));
         
         memberTable.setItems(data);
         memberTable.getColumns().addAll(rankCol,nameCol,donationsCol,scoreCol);
