@@ -27,6 +27,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -159,14 +160,17 @@ public class ClashRoyale_ClanWar extends Application {
         TableColumn donationsCol=new TableColumn("Donations");
         TableColumn scoreCol=new TableColumn("Trophies");
         
-        memberTable.getColumns().addAll(nameCol,rankCol,donationsCol,scoreCol);
-        grid.add(memberTable,1,8);
-        
         ObservableList<Member> data=FXCollections.observableArrayList();
         
         for (int i=0;i<members.length;++i){
             data.addAll(members[i]);
         }
+        
+        rankCol.setCellValueFactory(
+            new PropertyValueFactory<Member,String>("rank"));
+        
+        memberTable.getColumns().addAll(nameCol,rankCol,donationsCol,scoreCol);
+        grid.add(memberTable,1,8);
         
         memberTab.setContent(grid);
         
