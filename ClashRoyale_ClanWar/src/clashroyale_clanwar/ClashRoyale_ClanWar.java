@@ -176,6 +176,8 @@ public class ClashRoyale_ClanWar extends Application {
             new PropertyValueFactory<Member,String>("name"));
         donationsCol.setCellValueFactory(
             new PropertyValueFactory<Member,String>("donations"));
+        scoreCol.setCellValueFactory(
+            new PropertyValueFactory<Member,String>("trophies"));
         
         memberTable.setItems(data);
         memberTable.getColumns().addAll(rankCol,nameCol,donationsCol,scoreCol);
