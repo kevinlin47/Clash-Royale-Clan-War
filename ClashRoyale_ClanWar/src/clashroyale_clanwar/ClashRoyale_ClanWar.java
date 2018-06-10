@@ -169,7 +169,8 @@ public class ClashRoyale_ClanWar extends Application {
         rankCol.setCellValueFactory(
             new PropertyValueFactory<Member,String>("rank"));
         
-        memberTable.getColumns().addAll(nameCol,rankCol,donationsCol,scoreCol);
+        memberTable.setItems(data);
+        memberTable.getColumns().addAll(rankCol,nameCol,donationsCol,scoreCol);
         grid.add(memberTable,1,8);
         
         memberTab.setContent(grid);
