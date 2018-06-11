@@ -185,10 +185,14 @@ public class ClashRoyale_ClanWar extends Application {
         
         TableView statTable=new TableView();
         statTable.setEditable(false);
-        TableColumn stateNameCol=new TableColumn("Name");
+        TableColumn statNameCol=new TableColumn("Name");
         TableColumn sessionWinsCol=new TableColumn("Current Session Wins");
         TableColumn totalWinsCol=new TableColumn("Total Wins");
         TableColumn winLoseCol=new TableColumn("W:L");
+        statNameCol.setSortable(false);
+        sessionWinsCol.setSortable(false);
+        totalWinsCol.setSortable(false);
+        winLoseCol.setSortable(false);
         
         memberTab.setContent(grid);
         
