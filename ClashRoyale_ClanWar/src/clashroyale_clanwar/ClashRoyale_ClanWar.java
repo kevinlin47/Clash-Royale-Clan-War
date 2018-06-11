@@ -223,5 +223,18 @@ public class ClashRoyale_ClanWar extends Application {
         launch(args);
     }
     
+    public class MemberWarStat{
+        
+        private String name;
+        private int currentSessionWins;
+        private int totalBattles;
+        private int totalWins;
+        
+        public void setName(String name){
+            this.name=name;
+        }
+        
+        
+    }
 }
 
