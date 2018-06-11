@@ -198,6 +198,10 @@ public class ClashRoyale_ClanWar extends Application {
         sessionWinsCol.setResizable(false);
         totalWinsCol.setResizable(false);
         winLoseCol.setResizable(false);
+        sessionWinsCol.setMinWidth(150);
+        totalWinsCol.setMinWidth(150);
+        winLoseCol.setMinWidth(150);
+        statNameCol.setMinWidth(150);
         
         BorderPane borderPane=new BorderPane();
         borderPane.setCenter(statTable);
