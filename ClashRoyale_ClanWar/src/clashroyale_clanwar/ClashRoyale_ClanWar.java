@@ -183,6 +183,8 @@ public class ClashRoyale_ClanWar extends Application {
         memberTable.getColumns().addAll(rankCol,nameCol,donationsCol,scoreCol);
         grid.add(memberTable,1,8);
         
+        TableView statTbale=new TableView();
+        
         memberTab.setContent(grid);
         
         Scene scene=new Scene(tabPane,800,800);
