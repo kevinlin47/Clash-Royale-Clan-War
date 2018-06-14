@@ -245,6 +245,14 @@ public class ClashRoyale_ClanWar extends Application {
         public void setTotalWins(int totalWins){
             this.totalWins=totalWins;
         }
+        
+        public String getName(){
+            return this.name;
+        }
+        
+        public int getCurrentSessionWins(){
+            return this.currentSessionWins;
+        }
     }
 }
 
