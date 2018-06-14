@@ -253,6 +253,14 @@ public class ClashRoyale_ClanWar extends Application {
         public int getCurrentSessionWins(){
             return this.currentSessionWins;
         }
+        
+        public int getTotalBattles(){
+            return this.totalBattles;
+        }
+        
+        public int getTotalWins(){
+            return this.totalWins;
+        }
     }
 }
 
